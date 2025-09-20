@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f9f9f9; }
+    form { max-width: 500px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, select, textarea { width: 100%; margin-bottom: 1rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #e67e22; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #d35400; }
+    h2{margin-top: 5rem;}
+    #text{
+        text-align: center;
+    }
+   
+    .nav-header{
+    margin-left: -2rem;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-header">
+            <div class="nav-logo">
+               <a href="#" class="logo">EVANGADI</a>
+            </div>
+            <div class="nav-menu-btn" id="menu-btn">
+                <i class="ri-menu-line" id="menu"></i>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li ><a href="index.html#home">HOME</a></li>
+            <li ><a href="index.html#about-us">ABOUT</a></li>
+            <li ><a href="index.html#about">DESTINATIONS</a></li>
+            <li ><a href="index.html#tour">TOUR</a></li>
+            <li ><a href="index.html#package">PACKAGE</a></li>
+            <li ><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+       </nav> 
+  <h2 id="text">Book Your Ethiopian Adventure</h2>
+  <form action="https://formspree.io/f/xeolrdde" method="POST">
+    <input type="hidden" name="_redirect" value="https://singa10.github.io/evangadi-tour/thank.html">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="destination">Choose Destination</label>
+    <select id="destination" name="destination">
+      <option value="lalibela">Lalibela</option>
+      <option value="erta-ale">Erta Ale Volcano</option>
+      <option value="axum">Axum</option>
+      <option value="sof-omer">Sof Omer Cave</option>
+      <option value="sof-omer">Bale Mountains</option>
+      <option value="sof-omer">Abune Yemata Church</option>
+      <option value="sof-omer">Hamer</option>
+      <option value="sof-omer">Fasiledes</option>
+    </select>
+
+    <label for="date">Preferred Travel Date(G.C)</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="notes" rows="4"></textarea>
+
+    <button type="submit">Submit Booking</button>
+</form>
+  <footer id="contact">
+    <div class="section-container footer-container">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <a href="#" class="logo">EVANGADI</a>
+            </div>
+            <p>Get Connected With Us</p>
+            <ul class="footer-socials">
+                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FLIGHTS</a></li>
+                <li><a href="#">HOTELS</a></li>
+                <li><a href="#">CRUISE</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+                <li><a href="#"><span><i class="ri-phone-fill"></i></span>+251900085951</a></li>
+                <li><a href="#"><span><i class="ri-mail-fill"></i></span>Evangadi@gmail.com</a></li>
+                <li><a href="#"><span><i class="ri-map-pin-2-fill"></i></span>Addis Ababa, Ethiopia</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Subscribe</h4>
+            <form action="/"><input type="text" placeholder="Enter Your Email">
+                <button class="btn">Subscribe</button></form>
+        </div>
+    </div>
+    <div class="footer-bar">
+        copyright © 2025 Evangadi. All Rights Reserved.
+    </div>
+   </footer>
+   <script src="script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const navLinks = document.getElementById("nav-links");
+  
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      }
+    });
+  </script>
+  
+  
+</body>
+</html>
